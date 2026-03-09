@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polymarket 中文监控系统｜正式商品说明书</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --line: #e5e7eb;
+      --ok: #16a34a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: #fff;
+      border-radius: 24px;
+      padding: 44px 36px;
+      box-shadow: 0 20px 60px rgba(37,99,235,.22);
+      margin-bottom: 28px;
+    }
+    .hero h1 { margin: 0 0 10px; font-size: 38px; line-height: 1.2; }
+    .hero p { margin: 0; color: rgba(255,255,255,.86); font-size: 17px; }
+    .badges { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .badge {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: 13px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 24px rgba(15,23,42,.05);
+    }
+    h2 { margin: 0 0 16px; font-size: 24px; }
+    h3 { margin: 18px 0 10px; font-size: 18px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 8px 0 0 0; padding-left: 20px; }
+    li { margin: 8px 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .mini {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: #fafafa;
+    }
+    .mini strong { display: block; margin-bottom: 8px; }
+    .muted { color: var(--muted); }
+    .code {
+      background: #0f172a;
+      color: #e5e7eb;
+      border-radius: 14px;
+      padding: 14px 16px;
+      overflow: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+    }
+    .note {
+      border-left: 4px solid var(--primary);
+      background: #eff6ff;
+      padding: 14px 16px;
+      border-radius: 12px;
+      color: #1e3a8a;
+    }
+    .warn {
+      border-left: 4px solid #f59e0b;
+      background: #fffbeb;
+      padding: 14px 16px;
+      border-radius: 12px;
+      color: #92400e;
+    }
+    @media print {
+      body { background: #fff; }
+      .page { max-width: none; padding: 0; }
+      .hero { box-shadow: none; }
+      .card { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <h1>Polymarket 中文监控系统</h1>
+      <p>正式商品说明书｜面向中文用户的监控、筛选、历史观察与模拟交易工具</p>
+      <div class="badges">
+        <span class="badge">中文界面</span>
+        <span class="badge">一键启动</span>
+        <span class="badge">候选池排行</span>
+        <span class="badge">模拟交易</span>
+        <span class="badge">长期历史报告</span>
+        <span class="badge">支持二次开发</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>一、产品定位</h2>
+      <p>这是一套面向中文用户的 <strong>Polymarket 监控、候选池筛选、长期历史观察与模拟交易系统</strong>。</p>
+      <p>它更适合长期研究、盯盘与验证思路，而不是包装成“自动暴富脚本”。</p>
+      <div class="note">默认不包含自动真钱下单能力，当前版本更适合长期使用、持续观察和二次开发。</div>
+    </section>
+
+    <section class="card">
+      <h2>二、适合人群</h2>
+      <div class="grid">
+        <div class="mini"><strong>长期盯盘用户</strong><span class="muted">想持续观察 Polymarket 市场变化、而不是手工刷新页面的人。</span></div>
+        <div class="mini"><strong>中文界面需求用户</strong><span class="muted">不想一直看英文页面、希望更直观理解系统输出的人。</span></div>
+        <div class="mini"><strong>模拟验证用户</strong><span class="muted">想先看模拟持仓和历史报告，再决定后续怎么扩展的人。</span></div>
+        <div class="mini"><strong>二次开发用户</strong><span class="muted">想拿源码做二次修改、品牌替换或策略研究的人。</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>三、核心功能</h2>
+      <ul>
+        <li><strong>中文仪表盘：</strong>查看当前高分信号、模拟持仓、已平仓模拟单、近期盈亏。</li>
+        <li><strong>中文长期历史报告：</strong>查看候选池排行、历史活跃市场、长期波动情况。</li>
+        <li><strong>watchlist 预设：</strong>内置 crypto / crypto_loose / macro / macro_loose / ai / geopolitics。</li>
+        <li><strong>候选池机制：</strong>持续积累市场快照，找出长期值得观察的市场。</li>
+        <li><strong>模拟交易模块：</strong>记录模拟入场、止盈、止损、平仓原因与统计结果。</li>
+        <li><strong>一键脚本：</strong>一键启动、一键停止、一键查看状态、一键打开结果页。</li>
+        <li><strong>后台运行能力：</strong>支持持续运行，也支持 macOS launchd 常驻。</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>四、交付内容</h2>
+      <ul>
+        <li>完整源码包</li>
+        <li>中文使用说明</li>
+        <li>一键脚本工具</li>
+        <li>watchlist 配置文件</li>
+        <li>中文仪表盘页面</li>
+        <li>中文长期历史报告页面</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>五、小白使用方式</h2>
+      <h3>1）启动系统</h3>
+      <div class="code">bash /Users/_3gxpgs/.openclaw/workspace/scripts/start_polymarket_system.sh</div>
+      <h3>2）查看状态</h3>
+      <div class="code">bash /Users/_3gxpgs/.openclaw/workspace/scripts/status_polymarket_system.sh</div>
+      <h3>3）打开报告</h3>
+      <div class="code">bash /Users/_3gxpgs/.openclaw/workspace/scripts/open_polymarket_reports.sh</div>
+      <h3>4）停止系统</h3>
+      <div class="code">bash /Users/_3gxpgs/.openclaw/workspace/scripts/stop_polymarket_system.sh</div>
+    </section>
+
+    <section class="card">
+      <h2>六、产品特点</h2>
+      <div class="grid">
+        <div class="mini"><strong>中文化</strong><span class="muted">报告和常用脚本都做成中文，更适合直接使用。</span></div>
+        <div class="mini"><strong>门槛低</strong><span class="muted">支持一键启动，普通用户也能先把系统跑起来。</span></div>
+        <div class="mini"><strong>适合长期使用</strong><span class="muted">能持续积累历史快照，逐步形成候选池和长期报告。</span></div>
+        <div class="mini"><strong>可扩展</strong><span class="muted">适合后续继续做品牌定制、策略调整和功能扩展。</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>七、免责声明</h2>
+      <div class="warn">
+        <p>1. 本产品为研究、监控、筛选与模拟用途，不构成任何收益承诺。</p>
+        <p>2. 本产品默认不包含自动真钱下单能力。</p>
+        <p>3. 本产品更适合长期使用与持续观察，不属于稳赚脚本或收益承诺工具。</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>八、售后与定制</h2>
+      <ul>
+        <li>安装指导</li>
+        <li>watchlist 调整</li>
+        <li>页面与品牌名称替换</li>
+        <li>功能定制开发</li>
+        <li>后续升级与维护</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

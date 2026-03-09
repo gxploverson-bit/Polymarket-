@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polymarket 中文监控系统｜发售资料页</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg2: #111827;
+      --text: #f3f4f6;
+      --muted: #cbd5e1;
+      --primary: #3b82f6;
+      --accent: #22c55e;
+      --line: rgba(255,255,255,.1);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Helvetica Neue",Arial,sans-serif;
+      background:linear-gradient(180deg,#0b1020,#111827);
+      color:var(--text);
+      line-height:1.7;
+    }
+    .wrap{max-width:1060px;margin:0 auto;padding:32px 20px 80px}
+    .hero{
+      padding:60px 28px 40px;
+      border-radius:28px;
+      background:radial-gradient(circle at top right, rgba(59,130,246,.35), transparent 35%), linear-gradient(135deg,#111827,#0f172a);
+      border:1px solid var(--line);
+      box-shadow:0 30px 80px rgba(0,0,0,.35);
+    }
+    .hero h1{font-size:44px;line-height:1.15;margin:0 0 14px}
+    .hero p{font-size:18px;color:var(--muted);margin:0 0 18px}
+    .tags{display:flex;flex-wrap:wrap;gap:10px}
+    .tag{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--line);font-size:13px}
+    .section{margin-top:22px;padding:28px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+    h2{margin:0 0 14px;font-size:26px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .item{padding:18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+    .item strong{display:block;margin-bottom:8px}
+    ul{margin:8px 0 0;padding-left:20px}
+    li{margin:8px 0}
+    .price{display:flex;gap:16px;flex-wrap:wrap}
+    .price .item{flex:1;min-width:200px}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600}
+    .btn.primary{background:var(--primary);color:#fff}
+    .btn.secondary{background:rgba(255,255,255,.06);border:1px solid var(--line);color:#fff}
+    .ok{color:#86efac}
+    .warn{color:#fcd34d}
+    @media print{
+      body{background:#fff;color:#111}
+      .hero,.section,.item{background:#fff;color:#111;border:1px solid #ddd;box-shadow:none}
+      .hero p,.tag{color:#444}
+      .btn{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Polymarket 中文监控系统</h1>
+      <p>一套面向中文用户的监控、筛选、长期历史观察与模拟交易系统。适合研究、盯盘、候选池筛选和二次开发。</p>
+      <div class="tags">
+        <span class="tag">中文界面</span>
+        <span class="tag">一键启动</span>
+        <span class="tag">候选池排行</span>
+        <span class="tag">历史报告</span>
+        <span class="tag">模拟交易</span>
+        <span class="tag">可二次开发</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="#price">查看价格建议</a>
+        <a class="btn secondary" href="#deliver">查看交付内容</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>这是什么</h2>
+      <p>这不是“稳赚脚本”，而是一套适合长期使用的 <strong>Polymarket 中文研究与监控工具</strong>。</p>
+      <ul>
+        <li>帮助你长期盯盘，而不是手工刷新</li>
+        <li>帮助你筛候选池，而不是只看一瞬间</li>
+        <li>帮助你先做模拟验证，而不是直接碰真钱</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>核心卖点</h2>
+      <div class="grid">
+        <div class="item"><strong>中文仪表盘</strong>打开就能看懂当前高分信号、模拟持仓和近期盈亏。</div>
+        <div class="item"><strong>中文长期历史报告</strong>更适合长期观察哪些市场值得持续盯。</div>
+        <div class="item"><strong>watchlist 预设</strong>支持 crypto / macro / AI / geopolitics 等方向。</div>
+        <div class="item"><strong>一键脚本</strong>支持一键启动、停止、状态查看、打开报告。</div>
+        <div class="item"><strong>候选池机制</strong>通过历史快照积累，逐步形成长期候选池。</div>
+        <div class="item"><strong>模拟交易模块</strong>先验证逻辑，再决定后续怎么扩展。</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>适合谁</h2>
+      <ul>
+        <li>想长期观察 Polymarket 的用户</li>
+        <li>不想一直看英文界面的用户</li>
+        <li>想先做模拟交易验证的用户</li>
+        <li>想拿源码继续改造的用户</li>
+      </ul>
+    </section>
+
+    <section id="deliver" class="section">
+      <h2>交付内容</h2>
+      <ul>
+        <li>完整源码包</li>
+        <li>中文使用说明</li>
+        <li>一键脚本工具</li>
+        <li>watchlist 配置文件</li>
+        <li>中文仪表盘页面</li>
+        <li>中文长期历史报告页面</li>
+      </ul>
+    </section>
+
+    <section id="price" class="section">
+      <h2>建议售价</h2>
+      <div class="price">
+        <div class="item"><strong>基础源码版</strong><div class="ok">99 元</div><div>适合试水，先拿市场反馈。</div></div>
+        <div class="item"><strong>带安装指导版</strong><div class="ok">299 元</div><div>适合不想自己折腾的用户。</div></div>
+        <div class="item"><strong>定制修改版</strong><div class="ok">599 元起</div><div>适合品牌替换、页面定制、功能调整。</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>免责声明</h2>
+      <p class="warn">本产品为研究、监控、筛选与模拟用途，不承诺收益；默认不包含自动真钱下单能力。</p>
+    </section>
+  </div>
+</body>
+</html>
